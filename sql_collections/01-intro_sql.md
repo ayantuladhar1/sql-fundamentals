@@ -45,3 +45,5 @@ SELECT * FROM Customers;
 <img width="411" height="304" alt="image" src="https://github.com/user-attachments/assets/446642ba-8f5b-453e-8623-48d0b90d788a" />
 <img width="2023" height="503" alt="image" src="https://github.com/user-attachments/assets/24861a45-1322-484c-bc12-e264f686dbed" />
 
+The columns in the "Customers" table consist of CustomerID, CustomerName, ContactName, Address, City, PostalCode and Country. A column is a vertical entity in a table.
+A record also called a row is each individual entry that exits in a table. For example, there are 91 records in the above Customers table. A record is a horizontal entity in a table.
