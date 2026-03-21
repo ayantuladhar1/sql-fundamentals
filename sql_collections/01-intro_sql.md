@@ -43,6 +43,7 @@ Look at the "Customers" table:
 SELECT * FROM Customers;
 ```
 <img width="411" height="304" alt="image" src="https://github.com/user-attachments/assets/446642ba-8f5b-453e-8623-48d0b90d788a" />
+
 | CustomerID | CustomerName                         | ContactName          | Address                                        | City            | PostalCode | Country     |
 | ---------- | ------------------------------------ | -------------------- | ---------------------------------------------- | --------------- | ---------- | ----------- |
 | 1          | Alfreds Futterkiste                  | Maria Anders         | Obere Str. 57                                  | Berlin          | 12209      | Germany     |
