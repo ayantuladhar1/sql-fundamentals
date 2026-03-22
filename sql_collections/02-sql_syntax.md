@@ -131,4 +131,19 @@ In this tutorial we will write all SQL keywords in upper-case.
 ## Semicolon after SQL Statments?
 Some database systems require a semicolon at the end of each SQL statement.
 
-Semicolon is the standarad way to separate each SQL statement in database systems that allow more than 
+Semicolon is the standarad way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.
+
+In this tutorial, we will use semicolon at the end of each SQL statement.
+
+## Some of The Most Important SQL Commands
+* SELECT - extracts data from a database
+* UPDATE - updates data in a database
+* DELETE - delete data from a database
+* INSERT INTO - inserts new data into a database
+* CREATE DATABASE - creates a new database
+* ALTER DATABASE - modifies a database
+* CREATE TABLE - creates a new table
+* ALTER TABLE - modifies a table
+* DROP TABLE - deletes a table
+* CREATE INDEX - creates an index (search key)
+* DROP INDEX - deletes an index
