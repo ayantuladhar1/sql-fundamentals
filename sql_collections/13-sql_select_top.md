@@ -161,4 +161,68 @@ WHERE Country='Germany';
 | 6          | Blauer See Delikatessen   | Hanna Moos   | Forsterstr. 57 | Mannheim | 68306      | Germany |
 | 17         | Drachenblut Delikatessend | Sven Ottlieb | Walserweg 21   | Aachen   | 52066      | Germany |
 
+The following SQL shows the equivalent example for MySQL:
 
+## Example:
+```sql
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+```
+
+| CustomerID | CustomerName              | ContactName  | Address        | City     | PostalCode | Country |
+| ---------- | ------------------------- | ------------ | -------------- | -------- | ---------- | ------- |
+| 1          | Alfreds Futterkiste       | Maria Anders | Obere Str. 57  | Berlin   | 12209      | Germany |
+| 6          | Blauer See Delikatessen   | Hanna Moos   | Forsterstr. 57 | Mannheim | 68306      | Germany |
+| 17         | Drachenblut Delikatessend | Sven Ottlieb | Walserweg 21   | Aachen   | 52066      | Germany |
+
+The following SQL shows the equivalent example for Oracle:
+
+## Example:
+```sql
+SELECT * FROM Customers
+WHERE Country = 'Germany'
+FETCH FIRST 3 ROWS ONLY;
+```
+
+## SELECT TOP and ORDER BY
+Add the ORDER BY keyword when you want to sort the result, and return the first 3 records of the sorted result.
+
+For SQL Server and MS Access:
+
+## Example:
+Sort the result reverse alphabetically by CustomerName, and return the first 3 records:
+```sql
+SELECT TOP 3 * FROM Customers
+ORDER BY CustomerName DESC;
+```
+
+| CustomerID | CustomerName         | ContactName     | Address                     | City     | PostalCode | Country |
+| ---------- | -------------------- | --------------- | --------------------------- | -------- | ---------- | ------- |
+| 91         | Wolski               | Zbyszek         | ul. Filtrowa 68             | Walla    | 01-012     | Poland  |
+| 90         | Wilman Kala          | Matti Karttunen | Keskuskatu 45               | Helsinki | 21240      | Finland |
+| 89         | White Clover Markets | Karl Jablonski  | 305 - 14th Ave. S. Suite 3B | Seattle  | 98128      | USA     |
+
+The following SQL shows the equivalent example for MySQL:
+
+## Example:
+```sql
+SELECT * FROM Customers
+ORDER BY CustomerName DESC
+LIMIT 3;
+```
+
+| CustomerID | CustomerName         | ContactName     | Address                     | City     | PostalCode | Country |
+| ---------- | -------------------- | --------------- | --------------------------- | -------- | ---------- | ------- |
+| 91         | Wolski               | Zbyszek         | ul. Filtrowa 68             | Walla    | 01-012     | Poland  |
+| 90         | Wilman Kala          | Matti Karttunen | Keskuskatu 45               | Helsinki | 21240      | Finland |
+| 89         | White Clover Markets | Karl Jablonski  | 305 - 14th Ave. S. Suite 3B | Seattle  | 98128      | USA     |
+
+The following SQL shows the equivalent example for Oracle:
+
+## Example:
+```sql
+SELECT * FROM Customers
+ORDER BY CustomerName DESC
+FETCH FIRST 3 ROWS ONLY;
+```
