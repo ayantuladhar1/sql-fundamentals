@@ -50,3 +50,42 @@ WHERE CustomerID=1;
 | CustomerID | CustomerName        | ContactName  | Address       | City   | PostalCode | Country |
 | ---------- | ------------------- | ------------ | ------------- | ------ | ---------- | ------- |
 | 1          | Alfreds Futterkiste | Maria Anders | Obere Str. 57 | Berlin | 12209      | Germany |
+
+## Operators in the WHERE Clause
+You can use other operators than the = operator to filter the search.
+
+## Example:
+Select all customers with a CustomerID greater than 80:
+```sql
+SELECT * FROM Customers
+WHERE CustomerID > 80;
+```
+
+| CustomerID | CustomerName                     | ContactName       | Address                     | City      | PostalCode | Country |
+| ---------- | -------------------------------- | ----------------- | --------------------------- | --------- | ---------- | ------- |
+| 81         | Tradição Hipermercados           | Anabela Domingues | Av. Inês de Castro, 414     | São Paulo | 05634-030  | Brazil  |
+| 82         | Trails Head Gourmet Provisioners | Helvetius Nagy    | 722 DaVinci Blvd.           | Kirkland  | 98034      | USA     |
+| 83         | Vaffeljernet                     | Palle Ibsen       | Smagsløget 45               | Århus     | 8200       | Denmark |
+| 84         | Victuailles en stock             | Mary Saveley      | 2, rue du Commerce          | Lyon      | 69004      | France  |
+| 85         | Vins et alcools Chevalier        | Paul Henriot      | 59 rue de lAbbaye           | Reims     | 51100      | France  |
+| 86         | Die Wandernde Kuh                | Rita Müller       | Adenauerallee 900           | Stuttgart | 70563      | Germany |
+| 87         | Wartian Herkku                   | Pirkko Koskitalo  | Torikatu 38                 | Oulu      | 90110      | Finland |
+| 88         | Wellington Importadora           | Paula Parente     | Rua do Mercado, 12          | Resende   | 08737-363  | Brazil  |
+| 89         | White Clover Markets             | Karl Jablonski    | 305 - 14th Ave. S. Suite 3B | Seattle   | 98128      | USA     |
+| 90         | Wilman Kala                      | Matti Karttunen   | Keskuskatu 45               | Helsinki  | 21240      | Finland |
+| 91         | Wolski                           | Zbyszek           | ul. Filtrowa 68             | Walla     | 01-012     | Poland  |
+
+The following operators can be used in the WHERE clause:
+
+|Operator | Description                                                                 |
+| ------- | --------------------------------------------------------------------------- | 
+| \=      | Equal                                                                       | 
+| \>      | Greater than                                                                | 
+| <       | Less than                                                                   | 
+| \>=     | Greater than or equal                                                       | 
+| <=      | Less than or equal                                                          | 
+| <>      | Not equal. Note: In some versions of SQL this operator may be written as != | 
+| BETWEEN | Between a certain range                                                     | 
+| LIKE    | Search for a pattern                                                        | 
+| IN      | To specify multiple possible values for a column                            |
+
