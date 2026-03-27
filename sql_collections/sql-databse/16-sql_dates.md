@@ -1,0 +1,58 @@
+# SQL Dates
+The most difficult part when working with dates in databases, is to be sure that the format of the date you are trying to insert/select, matches the format of the date column in the database.
+
+## SQL Date Data Types
+Different SQL databases have various data types to store date and time values.
+
+MySQL has the following date data types:
+* DATE - format YYYY-MM-DD
+* DATETIME - format: YYYY-MM-DD HH:MI:SS
+* TIMESTAMP - format: YYYY-MM-DD HH:MI:SS
+* TIME - format: HH:MI:SS
+* YEAR - format YYYY or YY
+
+## SQL Working With Dates
+Look at the following table:
+
+## Orders Table
+
+| OrderId | ProductName            | OrderDate  |
+| ------- | ---------------------- | ---------- |
+| 1       | Geitost                | 2025-11-11 |
+| 2       | Camembert Pierrot      | 2025-11-09 |
+| 3       | Mozzarella di Giovanni | 2025-11-11 |
+| 4       | Mascarpone Fabioli     | 2025-10-29 |
+
+Now we want to select the records with an OderDate of "2025-11-11" from the table above.
+
+We use the following SELECT statement:
+```sql
+SELECT * FROM Orders WHERE OrderDate='2025-11-11'
+```
+
+The result-set will look like this:
+
+| OrderId | ProductName            | OrderDate  |
+| ------- | ---------------------- | ---------- |
+| 1       | Geitost                | 2025-11-11 |
+| 3       | Mozzarella di Giovanni | 2025-11-11 |
+
+Note: Two dates can easily be compared if there is no time componenet involved!
+
+Now, assume that the "Orders" table looks like this (notice the added time-componenet in the "OrderDate" column):
+
+| OrderId | ProductName            | OrderDate           |
+| ------- | ---------------------- | ------------------- |
+| 1       | Geitost                | 2025-11-11 13:23:44 |
+| 2       | Camembert Pierrot      | 2025-11-09 15:45:21 |
+| 3       | Mozzarella di Giovanni | 2025-11-11 11:12:01 |
+| 4       | Mascarpone Fabioli     | 2025-10-29 14:56:59 |
+
+If we use the same SELECT statement as above:
+```sql
+SELECT * FROM Orders WHERE OrderDate='2025-11-11'
+```
+
+we will get no result! This is becuase the query is looking only for dates with no time portion.
+
+Tip: To keep your queries simple and easy to maintain, do not use time-components in your dates unless you have to!
