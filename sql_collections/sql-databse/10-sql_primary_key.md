@@ -58,3 +58,14 @@ To define a named PRIMARY KEY constraint on mutiple column, use the following SQ
 ALTER TABLE Persons
 ADD CONSTRAINT PK_Person PRIMARY KEY (ID, LastName);
 ```
+
+Note: When using ALTER TABLE to add a primary key, the primary key columns must have been decalred with NOT NULL upon creation of the table.
+
+## Drop a PRIMARY KEY Constraint
+To drop a PRIMARY KEY constraint, use the following SQL:
+
+## MySQL:
+```sql
+ALTER TABLE Persons
+DROP PRIMARY KEY;
+```
