@@ -90,10 +90,10 @@ txtUserId = getRequestString("UserId");
 txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
 ```
 
-And the following input:
-User id: 105; DROP TABLE Suppliers
+And the following input:  
+User id: 105; DROP TABLE Suppliers  
 
-The valid SQL statements would look like this:
+The valid SQL statements would look like this:  
 
 ## Result
 ```sql
